@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Title Here</title>
+  <title>Parkfinder Template</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <!--Bootstrap, Google fonts, and my custom CSS-->
@@ -24,9 +24,57 @@
 
     <!--Main content section-->
     <main>
-      <h1>Parkfinder App Sample Template</h1>
+      <h2>Parkfinder App Sample Template</h2>
+      <h4>Just a sample template of code snippets we might want to use.</h4><br><br>
 
-      <h5>Here's a list of all the input types we might want to use, styled with Bootstrap classes:</h5>
+      <h5>Here's a list of input types, styled with Bootstrap classes:</h5><br>
+      <!--Start form-->
+      <form id="park-search">
+      <p>Drop-down menu</p>
+      <select class="form-control" id="beverage">
+        <option value="1">Coffee</option>
+        <option value="2">Tea</option>
+        <option value="3">Kombucha</option>
+        <option value="4">Water</option>
+      </select>
+      <br>
+
+      <div class="radio">
+        <p>Radio buttons</p>
+  <label>
+    <input type="radio" name="flavor" value="chocolate" checked>
+    Chocolate
+  </label>
+</div>
+<div class="radio">
+  <label>
+    <input type="radio" name="flavor" value="vanilla">
+    Vanilla
+  </label>
+</div>
+<div class="radio">
+  <label>
+    <input type="radio" name="flavor" value="cookiesandcream">
+    Cookies & Cream
+  </label>
+  <br><br>
+
+  <div class="form-group">
+    <p>Dates</p>
+  <label for="born">Date of birth:</label>
+  <input id="born" class="form-control" type="date">
+</div>
+
+  <br>
+</div>
+      <button type="submit">Submit Form</button>
+    </form>
+
+    <!--Results div-->
+    <div class="hidden" id="results">
+
+    </div>
+
     </main>
 
     <!--Optional footer for links/social media icons-->
