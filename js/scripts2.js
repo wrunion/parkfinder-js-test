@@ -68,6 +68,23 @@ function hideGalaxyPark() {
   text.style.display = "none";
 }
 
+//Complex functions sorted by feature
+function showPlayground() {
+  var checkBox = document.getElementById("playground");
+  var text = document.getElementById("playground-result");
+  if (checkBox.checked == true){
+  text.style.display = "block";
+  } else {
+   text.style.display = "none";
+ }
+}
+
+
+function showAccessibility() {
+  $("hobbit-result").show();
+  $("dragon-result").hide();
+}
+
 //To hide all divs if nothing is checked
 function hideAll() {
   hideDragonPark();
@@ -77,13 +94,28 @@ function hideAll() {
   hideUnicornPark();
 }
 
-var parksArray = [];
+
 
 // var parksChecked = function() {
 //   var checked = $("input:checkbox[name=parks]:checked").val();
 //   checked.forEach
 // };
 
-if (parksArray === null) {
-  hideAll();
-}
+// if (parksArray === null) {
+//   hideAll();
+// }
+//
+// var parksArray = [];
+
+//UI Logic
+$(document).ready(function() {
+  $("form").submit(function(event) {
+    event.preventDefault();
+    $("input:checkbox[name=toppings-deluxe]:checked").each(function() {
+       toppingsArray.push($(this).val());
+     });
+
+
+
+  });
+});
