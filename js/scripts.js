@@ -8,7 +8,7 @@ var flavor = $("input:radio[name=flavor]:checked").val();
 /*How to get values from checkboxes:*/
 var flavor = $("input:checkbox[name=flavor]:checked").val();
 
-
+//
 /*Sample script we may want to copy from*/
 // <script type="text/javascript">
 // function doSearch(roomquery) {
