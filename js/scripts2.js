@@ -16,11 +16,40 @@ var dragonPark = new Park(false, true, true, true, false, true, true);
 var hobbitPark = new Park(true, false, true, true, true, false, false);
 var galaxyPark = new Park(false, true, true, true, false, true, false);
 
+//Array of park objects
+var parkObjects = [rainbowPark, unicornPark, dragonPark, hobbitPark, galaxyPark];
+
+//Array of park name keywords for manipulating the DOM
+var parkNames = ["rainbow", "unicorn", "dragon", "hobbit", "galaxy"];
+
+//To show all parks with jQuery
+function showAllParks() {
+  parkNames.forEach(function(park) {
+    $("#" + park + "-result").show();
+  });
+}
+
+//To hide all parks with jQuery
+function hideAllParks() {
+  parkNames.forEach(function(park) {
+    $("#" + park + "-result").hide();
+  });
+}
+
+
+
+//OLD CODE BELOW. NEEDS TO BE REFACTORED. (Refactoring taking place above)
+
 //Simple functions to show the parks
 function showRainbowPark() {
-  var text = document.getElementById("rainbow-result");
-  text.style.display = "block";
+  $("#rainbow-result").show();
 }
+
+function showUnicornPark() {
+  $("#unicorn-result").show();
+}
+
+
 
 function showUnicornPark() {
   var text = document.getElementById("unicorn-result");
@@ -44,8 +73,7 @@ function showGalaxyPark() {
 
 //Simple functions to hide the parks
 function hideRainbowPark() {
-  var text = document.getElementById("rainbow-result");
-  text.style.display = "none";
+  $("#rainbow-result").hide();
 }
 
 function hideUnicornPark() {
@@ -68,6 +96,23 @@ function hideGalaxyPark() {
   text.style.display = "none";
 }
 
+//Complex functions sorted by feature
+function showPlayground() {
+  var checkBox = document.getElementById("playground");
+  var text = document.getElementById("playground-result");
+  if (checkBox.checked == true){
+  text.style.display = "block";
+  } else {
+   text.style.display = "none";
+ }
+}
+
+
+function showAccessibility() {
+  $("hobbit-result").show();
+  $("dragon-result").hide();
+}
+
 //To hide all divs if nothing is checked
 function hideAll() {
   hideDragonPark();
@@ -77,13 +122,29 @@ function hideAll() {
   hideUnicornPark();
 }
 
-var parksArray = [];
+
 
 // var parksChecked = function() {
 //   var checked = $("input:checkbox[name=parks]:checked").val();
 //   checked.forEach
 // };
 
-if (parksArray === null) {
-  hideAll();
-}
+// if (parksArray === null) {
+//   hideAll();
+// }
+//
+// var parksArray = [];
+
+//UI Logic
+$(document).ready(function() {
+  $(".hidden").hide();
+  // $("form").submit(function(event) {
+  //   event.preventDefault();
+  //   $("input:checkbox[name=toppings-deluxe]:checked").each(function() {
+  //      toppingsArray.push($(this).val());
+  //    });
+  //
+  //
+  //
+  // });
+});
