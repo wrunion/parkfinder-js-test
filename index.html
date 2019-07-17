@@ -12,7 +12,7 @@
   <!--jQuery and my custom JS-->
   <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.0.min.js"></script>
   <script src="https://kit.fontawesome.com/c04ff972e0.js"></script>
-  <script src="js/scripts.js"></script>
+  <script src="js/scripts2.js"></script>
 </head>
 
 <body>
@@ -100,14 +100,15 @@
       </div> -->
       <!-- <h2>Click on the name of the park to view more information.</h2> -->
       <div class="checkboxes">
-        <input type="checkbox" name="parks" value="rainbow" id="rainbow" onclick="showRainbowPark(); showDragonPark()">Pegasus Playground<br>
-        <input type="checkbox" name="parks" value="unicorn" id="unicorn" onclick="showUnicornPark()">Broomstick Parking<br>
-        <input type="checkbox" name="parks" value="dragon" id="dragon" onclick="showDragonPark()">Fairy Garden<br>
-        <input type="checkbox" name="parks" value="hobbit" id="hobbit" onclick="showHobbitPark()">Restroom<br>
-        <input type="checkbox" name="parks" value="galaxy" id="galaxy" onclick="showGalaxyPark()">Accessibility<br>
-        <!-- <input type="checkbox" name="parks" value="galaxy" id="galaxy" onclick=" showUnicornPark()">Ghost Zone<br>
-        <input type="checkbox" name="parks" value="galaxy" id="galaxy" onclick="showHobbitPark()">Mermaid Pool<br> -->
+        <input type="checkbox" name="parks" value="rainbow" id="rainbow" onclick="showRainbowPark(); showUnicornPark(); showHobbitPark(); hideDragonPark(); hideGalaxyPark()">Pegasus Playground<br>
+        <input type="checkbox" name="parks" value="unicorn" id="unicorn" onclick="showRainbowPark(); showDragonPark(); showHobbitPark(); showGalaxyPark(); hideRainbowPark()">Broomstick Parking<br>
+        <input type="checkbox" name="parks" value="dragon" id="dragon" onclick="hideGalaxyPark()">Fairy Garden<br>
+        <input type="checkbox" name="parks" value="hobbit" id="hobbit" onclick="showRainbowPark(); showUnicornPark(); showDragonPark(); showHobbitPark(); hideGalaxyPark()">Restroom<br>
+        <input type="checkbox" name="parks" value="galaxy" id="galaxy" onclick="showGalaxyPark(); showDragonPark(); showHobbitPark; showUnicornPark(); hideRainbowPark();">Accessibility<br>
+        <input type="checkbox" name="parks" value="galaxy" id="galaxy" onclick=" showDragonPark(); showGalaxyPark(); hideRainbowPark(); hideHobbitPark();">Ghost Zone<br>
+        <input type="checkbox" name="parks" value="galaxy" id="galaxy" onclick="showHobbitPark(); showDragonPark(); showGalaxyPark(); hideRainbowPark();">Mermaid Pool<br>
       </div>
+      <!-- <button type="button">Reset</button> -->
       <br>
 
       <!--Results div-->

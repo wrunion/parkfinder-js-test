@@ -34,11 +34,11 @@ function Park(playground, parking, garden, restroom, accessibility, zone, pool) 
   this.pool = pool;
 }
 
-var rainbowPark = new Park(true, false, true, true, false, true, true);
-var unicornPark = new Park(true, true, false, true, true, false, true);
-var dragonPark = new Park(false, true, true, true, false, true, true);
-var hobbitPark = new Park(true, false, true, true, true, false, false);
-var galaxyPark = new Park(false, true, true, true, false, true, false);
+var rainbowPark = new Park(true, false, false, true, false, false, true);
+var unicornPark = new Park(true, true, true, true, true, false, true);
+var dragonPark = new Park(false, true, true, true, true, true, true);
+var hobbitPark = new Park(true, true, true, true, true, false, false);
+var galaxyPark = new Park(false, true, false, false, true, true, false);
 
 //Functions for amenities checkboxes
 
@@ -143,5 +143,5 @@ function showGalaxyPark() {
 //UI Logic
 
 // Resources:
-// 
+//
 // check out https//developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener
