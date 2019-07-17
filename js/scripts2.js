@@ -16,35 +16,29 @@ var dragonPark = new Park(false, true, true, true, false, true, true);
 var hobbitPark = new Park(true, false, true, true, true, false, false);
 var galaxyPark = new Park(false, true, true, true, false, true, false);
 
-//Create an array of park keywords for manipulating the HTML
-var parks = ["rainbow", "unicorn", "dragon", "hobbit", "galaxy"];
+//Array of park objects
+var parkObjects = [rainbowPark, unicornPark, dragonPark, hobbitPark, galaxyPark];
+
+//Array of park name keywords for manipulating the DOM
+var parkNames = ["rainbow", "unicorn", "dragon", "hobbit", "galaxy"];
 
 //To show all parks with jQuery
 function showAllParks() {
-  parks.forEach(function(park) {
+  parkNames.forEach(function(park) {
     $("#" + park + "-result").show();
   });
 }
 
 //To hide all parks with jQuery
 function hideAllParks() {
-  parks.forEach(function(park) {
+  parkNames.forEach(function(park) {
     $("#" + park + "-result").hide();
   });
 }
 
 
 
-// function showPark(park) {
-//   var text = document.getElementById(park + "-result");
-//   text.style.display = "block";
-// }
-
-// parks.forEach(function() {
-//
-// });
-
-
+//OLD CODE BELOW. NEEDS TO BE REFACTORED. (Refactoring taking place above)
 
 //Simple functions to show the parks
 function showRainbowPark() {
