@@ -40,28 +40,41 @@ var dragonPark = new Park(false, true, true, true, false, true, true);
 var hobbitPark = new Park(true, false, true, true, true, false, false);
 var galaxyPark = new Park(false, true, true, true, false, true, false);
 
-//   if ($("#rainbow-result").val() === true) {
-//     $("#rainbow-result").show();
-//   }
-//
-// }
+//Functions for amenities checkboxes
 
-// function myFunction() {
-// // Get the checkbox
-// var checkBox = document.getElementById("myCheck");
-// // Get the output text
-// var text = document.getElementById("text");
-//
-// // If the checkbox is checked, display the output text
-// if (checkBox.checked == true){
+
+
+// function rainbowPark() {
+//   // var text = document.getElementById("playground");
+//   var text = document.getElementById("rainbow-result");
 //   text.style.display = "block";
-// } else {
-//   text.style.display = "none";
-// }
+//   // if (checkBox.checked == true) {
+//   //   text.style.display = "block";
+//   // } else {
+//   //   text.style.display = "none";
+//   // }
 // }
 
-// $("#results").hide();
+// function rainbowPark() {
+//   // Get the checkbox
+//   var checkBox = document.getElementById("playground");
+//   // Get the output text
+//   var text = document.getElementById("rainbow-result");
+//   // If the checkbox is checked, display the output text
+//   if (checkBox.checked == true) {
+//     text.style.display = "block";
+//   } else {
+//     text.style.display = "none";
+//   }
+// }
 
+
+// function showPlaygroundParks() {
+//   rainbowPark();
+// }
+
+
+//Functions for park checkboxes
 function showRainbowPark() {
   // Get the checkbox
   var checkBox = document.getElementById("rainbow");
@@ -129,6 +142,6 @@ function showGalaxyPark() {
 
 //UI Logic
 
-$(document).ready(function() {
-
-});
+// Resources:
+// 
+// check out https//developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener
